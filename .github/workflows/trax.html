@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TraxMC - Servidor de Minigames</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ff6f20;
+        }
+        header {
+            background-color: #ff9300;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #ff9300;
+            padding: 10px 0;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        nav a:hover {
+            background-color: #e64a19;
+        }
+        .container {
+            padding: 20px;
+        }
+        .tab {
+            display: none;
+        }
+        .tab.active {
+            display: block;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #ff6f20;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .vip-section, .faq-section, .news-section, .inicio-section {
+            margin-top: 20px;
+        }
+        .plan {
+            background-color: #ffccbc;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .plan h3 {
+            margin: 0 0 10px;
+        }
+        .plan ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        img.logo {
+            max-width: 150px; /* Ajuste o tamanho da logo se necessário */
+        }
+        .social-links a {
+            margin: 0 10px;
+            color: #fff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="https://media.discordapp.net/attachments/1285786996614103092/1296578821419565106/1727007118537.png?ex=6712cca0&is=67117b20&hm=6af9eb25a496416c1a5e0590988f3b9b53a8d73dd881c2bb33ca034e8f8593e9&=&format=webp&quality=lossless&width=480&height=480" alt="Logo TraxMC" class="logo">
+    <h1>TraxMC</h1>
+    <p>O melhor servidor de minigames do Minecraft!</p>
+</header>
+
+<nav>
+    <a href="#inicio" onclick="showTab('inicio')">Início</a>
+    <a href="#vip" onclick="showTab('vip')">Comprar VIP</a>
+    <a href="#faq" onclick="showTab('faq')">FAQ</a>
+    <a href="#news" onclick="showTab('news')">Novidades</a>
+</nav>
+
+<div class="container">
+    <div id="inicio" class="tab active inicio-section">
+        <h2>Início</h2>
+        <p>Bem-vindo ao TraxMC! Estamos felizes em ter você aqui.</p>
+        <p>Siga nossas redes sociais:</p>
+        <div class="social-links">
+            <a href="https://discord.gg/uFwZGCb9gt" target="_blank">Discord</a>
+            <a href="https://www.youtube.com/@TRAXMC-n8f" target="_blank">YouTube</a>
+        </div>
+    </div>
+
+    <div id="vip" class="tab vip-section">
+        <h2>Comprar VIP</h2>
+        <p>Adquira sua assinatura VIP e tenha acesso a benefícios exclusivos:</p>
+
+        <div class="plan">
+            <h3>🔷 PRO – R$ 30</h3>
+            <ul>
+                <li>Tag exclusiva</li>
+                <li>Voar no lobby</li>
+                <li>Mudar seu nick no chat</li>
+                <li>Se destacar no TAB</li>
+                <li>Medalha exclusiva</li>
+            </ul>
+        </div>
+
+        <div class="plan">
+            <h3>🔷 MVP – R$ 20</h3>
+            <ul>
+                <li>Tag exclusiva</li>
+                <li>Voar no lobby</li>
+                <li>Mudar seu nick no chat</li>
+                <li>Se destacar no TAB</li>
+                <li>Medalha exclusiva</li>
+            </ul>
+        </div>
+
+        <div class="plan">
+            <h3>🔷 VIP – R$ 15</h3>
+            <ul>
+                <li>Tag exclusiva</li>
+                <li>Voar no lobby</li>
+                <li>Mudar seu nick no chat</li>
+                <li>Se destacar no TAB</li>
+                <li>Medalha exclusiva</li>
+            </ul>
+        </div>
+
+        <button onclick="window.location.href='https://discord.gg/seu-link-do-discord'">Comprar Agora</button>
+    </div>
+
+    <div id="faq" class="tab faq-section">
+        <h2>Perguntas Frequentes (FAQ)</h2>
+        <h3>1. Como posso me conectar ao servidor?</h3>
+        <p>Para se conectar, use o IP: <strong>traxmc.bedhost.com.br</strong></p>
+        <h3>2. Quais minigames estão disponíveis?</h3>
+        <p>Atualmente, Temos Somente Arenas Pvp!</p>
+        <h3>3. Posso jogar com amigos?</h3>
+        <p>Sim! Você pode convidar seus amigos para jogarem juntos.</p>
+    </div>
+
+    <div id="news" class="tab news-section">
+        <h2>Novidades</h2>
+        <ul>
+            <li><strong>Atualização 1.0:</strong> Novos minigames adicionados!</li>
+            <li><strong>Promoção VIP:</strong> Desconto de 50% até o final do mês!</li>
+            <li><strong>Eventos:</strong> Participe do nossos torneios mensais!</li>
+        </ul>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 TraxMC. Todos os direitos reservados.</p>
+</footer>
+
+<script>
+    function showTab(tabName) {
+        const tabs = document.querySelectorAll('.tab');
+        tabs.forEach(tab => {
+            tab.classList.remove('active');
+        });
+        document.getElementById(tabName).classList.add('active');
+    }
+</script>
+
+</body>
+</html>
